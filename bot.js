@@ -4,7 +4,7 @@ const prefix = '.'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
+client.user.setGame(`.help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -27,5 +27,68 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
+
+
+
+
+
+         client.on('message', message => {
+            if (message.content.startsWith(prefix + "bot")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField(' السيرفرات🌐',`[${client.guilds.size}]  `)
+.addField(' الاعضاء👥 ',` [${client.users.size}] `)
+.addField('الرومات📚 ',`[${client.channels.size}]`) 
+.addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
+.addField('مصمم  + صاحب البوت ',`KILLER`)
+.setColor('#7d2dbe')
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 client.login(process.env.BOT_TOKEN);
